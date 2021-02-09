@@ -11,51 +11,51 @@ describe('Javabuzz', function() {
   describe('knows when a number is', function() {
 
     it('divisible by 3', function() {
-      expect(javabuzz.isDivisibleByThree(3)).toBe(true);
+      expect(javabuzz._isDivisibleBy(3, 3)).toBe(true);
     });
 
     it('not divisible by 3', function() {
-      expect(javabuzz.isDivisibleByThree(1)).toBe(false);
+      expect(javabuzz._isDivisibleBy(1, 3)).toBe(false);
     });
 
     it('divisible by 5', function() {
-      expect(javabuzz.isDivisibleByFive(5)).toBe(true);
+      expect(javabuzz._isDivisibleBy(5, 5)).toBe(true);
     });
 
     it('not divisible by 5', function() {
-      expect(javabuzz.isDivisibleByFive(1)).toBe(false);
+      expect(javabuzz._isDivisibleBy(1, 5)).toBe(false);
     });
 
     it('divisible by by 15', function() {
-      expect(javabuzz.isDivisibleByFifteen(15)).toBe(true);
+      expect(javabuzz._isDivisibleBy(15, 15)).toBe(true);
     });
 
     it('not divisible by 15', function() {
-      expect(javabuzz.isDivisibleByFifteen(3)).toBe(false);
+      expect(javabuzz._isDivisibleBy(3, 15)).toBe(false);
     });
 
     it('not divisible by 15', function() {
-      expect(javabuzz.isDivisibleByFifteen(5)).toBe(false);
+      expect(javabuzz._isDivisibleBy(5, 15)).toBe(false);
     });
 
   });
 
-  describe('when playing, says', function() {
+  describe('when playing, play', function() {
 
     it('"Java" when a number is divisible by 3', function() {
-      expect(javabuzz.says(3)).toEqual("Java")
+      expect(javabuzz.play(3)).toEqual("Java")
     });
 
     it('"Buzz" when a number is divisible by 5', function() {
-      expect(javabuzz.says(5)).toEqual("Buzz")
+      expect(javabuzz.play(5)).toEqual("Buzz")
     });
 
     it('"JavaBuzz" when a number is divisible by 15', function() {
-      expect(javabuzz.says(15)).toEqual("JavaBuzz")
+      expect(javabuzz.play(15)).toEqual("JavaBuzz")
     });
 
     it('the number when a number is not divisible by 3 or 5', function() {
-      expect(javabuzz.says(1)).toEqual(1)
+      expect(javabuzz.play(1)).toEqual(1)
     });
 
   });
