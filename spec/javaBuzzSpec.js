@@ -1,3 +1,5 @@
+'use strict'
+
 describe('Javabuzz', function() {
 
   var javabuzz;
@@ -9,31 +11,31 @@ describe('Javabuzz', function() {
   describe('knows when a number is', function() {
 
     it('divisible by 3', function() {
-        expect(javabuzz.isDivisibleBy3(3)).toBe(true);
+        expect(javabuzz.isDivisibleByThree(3)).toBe(true);
     });
 
     it('not divisible by 3', function() {
-        expect(javabuzz.isDivisibleBy3(1)).toBe(false);
+        expect(javabuzz.isDivisibleByThree(1)).toBe(false);
     });
 
     it('divisible by 5', function() {
-        expect(javabuzz.isDivisibleBy5(5)).toBe(true);
+        expect(javabuzz.isDivisibleByFive(5)).toBe(true);
     });
 
     it('not divisible by 5', function() {
-        expect(javabuzz.isDivisibleBy5(1)).toBe(false);
+        expect(javabuzz.isDivisibleByFive(1)).toBe(false);
     });
 
     it('divisible by by 15', function() {
-        expect(javabuzz.isDivisibleBy15(15)).toBe(true);
+        expect(javabuzz.isDivisibleByFifteen(15)).toBe(true);
     });
 
     it('not divisible by 15', function() {
-        expect(javabuzz.isDivisibleBy15(3)).toBe(false);
+        expect(javabuzz.isDivisibleByFifteen(3)).toBe(false);
     });
 
     it('not divisible by 15', function() {
-        expect(javabuzz.isDivisibleBy15(5)).toBe(false);
+        expect(javabuzz.isDivisibleByFifteen(5)).toBe(false);
     });
 
   });
