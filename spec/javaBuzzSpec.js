@@ -1,5 +1,3 @@
-// 'use strict'
-
 describe('Javabuzz', function() {
 
   var javabuzz;

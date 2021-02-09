@@ -4,11 +4,11 @@ class Javabuzz {
    };
 
   play(number) {
-    if (this.isDivisibleByFifteen(number)) {
+    if (this._isDivisibleBy(number, 15)) {
       return "JavaBuzz"
-    } else if (this.isDivisibleByThree(number)) {
+    } else if (this._isDivisibleBy(number, 3)) {
       return "Java"
-    } else if (this.isDivisibleByFive(number)) {
+    } else if (this._isDivisibleBy(number, 5)) {
       return "Buzz"
     } else {
       return number;
